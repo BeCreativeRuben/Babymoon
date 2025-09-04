@@ -104,10 +104,15 @@ html{ scroll-behavior:smooth }
 .sneak-text ul{ margin:8px 0 0 18px; color:var(--muted); }
 .sneak-text li{ margin:6px 0; }
 
-.footer{ text-align:center; color:var(--text); padding: var(--space-3) 0 var(--space-2); font-size:14px; background:#e7d8c9; }
+.footer{ color:var(--text); padding: var(--space-3) 0 var(--space-2); font-size:14px; background:#e7d8c9; }
 .footer a{ color:var(--brand-ink); text-decoration: underline; }
-.footer .footer-inner{ max-width:960px; margin:0 auto; padding:0 var(--space-3); }
-.footer-logo{ height: clamp(1.1rem, 2.8vw, 1.8rem); width:auto; display:block; margin:0 auto var(--space-1); filter: drop-shadow(0 2px 6px rgba(0,0,0,.06)); }
+.footer .footer-inner{ max-width:960px; margin:0 auto; padding:0 var(--space-3); display:flex; align-items:center; gap:var(--space-2); justify-content:space-between; flex-wrap:wrap; }
+.footer-logo{ height: clamp(1.6rem, 4vw, 2.4rem); width:auto; display:block; margin:0; filter: drop-shadow(0 2px 6px rgba(0,0,0,.06)); }
+.footer small{ display:block; text-align:right; }
+@media (max-width: 640px){
+  .footer .footer-inner{ justify-content:center; text-align:center; }
+  .footer small{ text-align:center; }
+}
 
 /* Always light theme — remove dark overrides */
 
