@@ -76,12 +76,13 @@ html{ scroll-behavior:smooth }
 .wave{ position:absolute; left:0; right:0; bottom:0; height:52px; background: radial-gradient(120% 60px at 10% -10px, transparent 52px, var(--bg) 53px), radial-gradient(120% 60px at 30% -10px, transparent 52px, var(--bg) 53px), radial-gradient(120% 60px at 50% -10px, transparent 52px, var(--bg) 53px), radial-gradient(120% 60px at 70% -10px, transparent 52px, var(--bg) 53px), radial-gradient(120% 60px at 90% -10px, transparent 52px, var(--bg) 53px); }
 
 .brand{ text-align:center; padding: var(--space-4) 0 var(--space-1); }
+.brand:empty{ display:none; }
 .logo-wrap{ display:inline-block; padding:16px 24px; background:var(--soft); border-radius:20px; box-shadow:0 6px 30px rgba(201,127,115,.14); border:1px solid rgba(0,0,0,.03); }
 .brand #logo{ max-width:220px; height:auto; margin:0 auto 8px; display:block; filter: drop-shadow(0 6px 12px rgba(0,0,0,.05)); }
 .brand h1{ font-family:"Playfair Display", Georgia, serif; font-weight:600; letter-spacing:.2px; font-size:clamp(36px,6vw,64px); margin:8px 0 8px; }
 .brand .lede{ max-width:60ch; margin:0 auto; color:var(--muted); }
 
-.signup{ background:linear-gradient(180deg, var(--card), var(--soft)); border-radius:18px; padding: var(--space-3); margin: var(--space-4) 0; box-shadow:0 10px 30px rgba(0,0,0,.05); border:1px solid rgba(0,0,0,.04); }
+.signup{ background:linear-gradient(180deg, var(--card), var(--soft)); border-radius:18px; padding: var(--space-3); margin: var(--space-4) 0 var(--space-4); box-shadow:0 10px 30px rgba(0,0,0,.05); border:1px solid rgba(0,0,0,.04); }
 .signup h2{ margin:0 0 8px; font-size:24px; font-family:"Playfair Display", Georgia, serif; }
 .signup .consent{ color:var(--muted); margin:0 0 16px; font-size:14px; }
 .email-form .fields{ display:grid; grid-template-columns: 1fr; gap:10px; }
