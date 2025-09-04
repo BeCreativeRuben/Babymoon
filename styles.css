@@ -80,7 +80,8 @@ body{
 .sneak-text ul{ margin:8px 0 0 18px; color:var(--muted); }
 .sneak-text li{ margin:6px 0; }
 
-.footer{ text-align:center; color:var(--muted); padding:24px 0 16px; font-size:14px; }
+.footer{ text-align:center; color:var(--text); padding:24px 0 16px; font-size:14px; background:#e7d8c9; }
+.footer a{ color:var(--brand-ink); text-decoration: underline; }
 
 /* Always light theme — remove dark overrides */
 
