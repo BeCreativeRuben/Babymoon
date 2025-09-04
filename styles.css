@@ -19,6 +19,7 @@ body{
   background:var(--bg);
   line-height:1.5;
 }
+html{ scroll-behavior:smooth }
 
 /* Full-width hero banner */
 .hero-banner{
@@ -34,6 +35,8 @@ body{
 .hero-banner h1{ font-family:"Playfair Display", Georgia, serif; font-weight:600; font-size:clamp(42px,5.6vw,80px); margin:0 0 8px; }
 .hero-banner .sub{ font-family:"Playfair Display", Georgia, serif; font-size:clamp(20px,2.6vw,36px); margin:0 0 10px; }
 .hero-banner .mini{ margin:0; opacity:.9; }
+.hero-banner .cta{ display:inline-block; margin-top:16px; padding:12px 18px; border-radius:14px; background:linear-gradient(180deg, var(--brand), var(--brand-ink)); color:#fff; font-weight:700; letter-spacing:.2px; box-shadow:0 10px 24px rgba(201,127,115,.28); }
+.hero-banner .cta:hover{ filter:brightness(0.98); }
 
 .skip-link{
   position:absolute;left:-9999px;top:auto; width:1px;height:1px; overflow:hidden;
@@ -91,6 +94,7 @@ body{
 .sneak-grid{ display:grid; grid-template-columns:1fr; gap:20px; align-items:center; }
 .sneak-figure{ margin:0; border-radius:16px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,.08); background:#ddd; }
 .sneak-figure img{ width:100%; height:auto; display:block; object-fit:cover; }
+.sneak-figure img{ loading:lazy }
 .sneak-text{ padding:6px 4px; }
 .sneak-text ul{ margin:8px 0 0 18px; color:var(--muted); }
 .sneak-text li{ margin:6px 0; }

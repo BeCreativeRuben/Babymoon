@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function playBabymoonAnimation(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const button = document.querySelector('#newsletter-form .btn');
     const rect = button ? button.getBoundingClientRect() : {left: window.innerWidth/2, top: window.innerHeight/2, width:0, height:0};
     const cx = rect.left + rect.width/2 + window.scrollX;
