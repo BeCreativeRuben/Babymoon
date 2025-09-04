@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bed en Baby — Coming Soon</title>
+    <meta name="description" content="Bed en Baby — website komt binnenkort online. Schrijf je in om op de hoogte te blijven.">
+    <link rel="icon" href="./favicon.ico">
+    <meta property="og:title" content="Bed en Baby — Coming Soon">
+    <meta property="og:description" content="Website komt binnenkort online. Schrijf je in om op de hoogte te blijven.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/ardennen.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="./styles.css" as="style">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="announce" role="region" aria-label="Aankondiging">
+      <div class="announce-inner">
+        🎉 Volledige website opent op <strong>1 oktober om 20:00</strong>
+      </div>
+    </div>
+    <a class="skip-link" href="#content">Sla naar inhoud</a>
+    <main id="content" class="container" role="main">
+      <header class="brand">
+        <div class="logo-wrap">
+          <img id="logo" alt="Bed en Baby" src="./assets/logo.png" onerror="this.style.display='none'">
+        </div>
+        <h1>We lanceren binnenkort</h1>
+        <p class="lede">Schrijf je in om als eerste nieuws te ontvangen. Zacht, warm en met aandacht.</p>
+      </header>
+
+      <section class="signup" aria-labelledby="signup-title">
+        <h2 id="signup-title">Blijf op de hoogte</h2>
+        <p class="consent">Laat je e‑mail achter en we sturen je een seintje bij lancering.</p>
+        <form id="newsletter-form" class="email-form" action="https://formspree.io/f/xldwonlz" method="POST">
+          <div class="fields">
+            <label class="sr-only" for="email">E‑mail</label>
+            <input type="email" id="email" name="email" placeholder="E‑mailadres" autocomplete="email" required>
+            <button type="submit" class="btn">Inschrijven</button>
+          </div>
+          <label class="consent-row"><input type="checkbox" required> Ik ga akkoord om e‑mails te ontvangen en kan me altijd uitschrijven. <a href="./privacy.html">Privacyverklaring</a></label>
+          <p id="form-status" role="status" aria-live="polite" class="status" hidden>Versturen…</p>
+        </form>
+      </section>
+
+      <section class="sneak" aria-labelledby="sneak-title">
+        <div class="sneak-grid">
+          <figure class="sneak-figure">
+            <img src="./assets/ardennen.jpg" alt="Sneak peek van de stijl en sfeer" onerror="this.style.display='none'">
+          </figure>
+          <aside class="sneak-text">
+            <h2 id="sneak-title">Een origineel babymoon‑ of cocooncadeau</h2>
+            <p>Een warm verblijf om even bewust te vertragen, te genieten en herinneringen te maken. Helemaal afgestemd op rust en aandacht.</p>
+            <ul>
+              <li>Voor aanstaande ouders die samen willen genieten vóór of na de geboorte</li>
+              <li>Voor verse ouders die nood hebben aan rust en verbondenheid</li>
+              <li>Als kraamcadeau of gewoon zomaar, omdat het mag</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small>© <span id="year"></span> Vroedvrouw Jana. Alle rechten voorbehouden. · <a href="./privacy.html">Privacyverklaring</a></small>
+      </footer>
+    </main>
+
+    <!-- Success Popup Modal -->
+    <div class="modal" id="success-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="success-title">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-dialog" role="document">
+        <button class="modal-close" type="button" aria-label="Sluiten" data-close="true">×</button>
+        <div class="modal-emoji" aria-hidden="true">🌙✨</div>
+        <h3 id="success-title">Bedankt voor je inschrijving!</h3>
+        <p>We sturen je een seintje zodra we live gaan. Tot snel bij jullie babymoon in de Ardennen.</p>
+        <button class="btn modal-ok" type="button" data-close="true">Mooi!</button>
+      </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+  </html>
+
+

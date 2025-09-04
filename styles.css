@@ -1,0 +1,135 @@
+:root{
+  --bg:#f8f3ec; /* softer beige */
+  --text:#3a3a3a;
+  --muted:#7a7a7a;
+  --brand:#c97f73; /* soft terracotta accent */
+  --brand-ink:#a06258; /* deeper terracotta */
+  --soft:#fff9f7; /* blush */
+  --card:#ffffff;
+  --accent-2:#e9d7cf; /* pale clay */
+  --hero-image:url('../website foto s/Gecomprimeerd/zacht-landelijk-ardennen-verblijf-babymoon-cocoon.jpg.jpg');
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.5;
+}
+
+.skip-link{
+  position:absolute;left:-9999px;top:auto; width:1px;height:1px; overflow:hidden;
+}
+.skip-link:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;background:var(--brand-ink);color:#fff}
+
+.container{
+  max-width:960px;
+  margin:0 auto;
+  padding:24px;
+}
+
+/* Announcement bar */
+.announce{ background:#e7d8c9; color:var(--text); font-size:14px; }
+.announce-inner{ max-width:960px; margin:0 auto; padding:10px 24px; text-align:center; }
+
+/* Hero banner */
+.hero{
+  position:relative;
+  margin:-24px -24px 16px; /* stretch edge-to-edge in container context */
+  padding:48px 24px 64px;
+  background:
+    linear-gradient(180deg, rgba(201,127,115,.12), rgba(201,127,115,.0) 60%),
+    var(--hero-image) center/cover no-repeat;
+}
+.hero::after{ /* readability overlay */
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background: radial-gradient(120% 80% at 50% 20%, rgba(255,255,255,.85) 0%, rgba(255,255,255,.55) 40%, rgba(255,255,255,.28) 70%, rgba(255,255,255,.12) 100%);
+}
+.hero .brand{ padding:40px 0 0; }
+.hero .logo-wrap{ background: rgba(255,255,255,.92); backdrop-filter: blur(4px); }
+.hero-card{ position:relative; z-index:1; max-width:780px; margin:0 auto; background:rgba(255,255,255,.78); backdrop-filter: blur(6px); border:1px solid rgba(0,0,0,.04); box-shadow:0 12px 38px rgba(0,0,0,.10); border-radius:20px; padding:22px 20px 18px; }
+.wave{ position:absolute; left:0; right:0; bottom:0; height:52px; background: radial-gradient(120% 60px at 10% -10px, transparent 52px, var(--bg) 53px), radial-gradient(120% 60px at 30% -10px, transparent 52px, var(--bg) 53px), radial-gradient(120% 60px at 50% -10px, transparent 52px, var(--bg) 53px), radial-gradient(120% 60px at 70% -10px, transparent 52px, var(--bg) 53px), radial-gradient(120% 60px at 90% -10px, transparent 52px, var(--bg) 53px); }
+
+.brand{ text-align:center; padding:56px 0 8px; }
+.logo-wrap{ display:inline-block; padding:16px 24px; background:var(--soft); border-radius:20px; box-shadow:0 6px 30px rgba(201,127,115,.14); border:1px solid rgba(0,0,0,.03); }
+.brand #logo{ max-width:220px; height:auto; margin:0 auto 8px; display:block; filter: drop-shadow(0 6px 12px rgba(0,0,0,.05)); }
+.brand h1{ font-family:"Playfair Display", Georgia, serif; font-weight:600; letter-spacing:.2px; font-size:clamp(36px,6vw,64px); margin:8px 0 8px; }
+.brand .lede{ max-width:60ch; margin:0 auto; color:var(--muted); }
+
+.signup{ background:linear-gradient(180deg, var(--card), var(--soft)); border-radius:18px; padding:28px; margin:36px 0; box-shadow:0 10px 30px rgba(0,0,0,.05); border:1px solid rgba(0,0,0,.04); }
+.signup h2{ margin:0 0 8px; font-size:24px; font-family:"Playfair Display", Georgia, serif; }
+.signup .consent{ color:var(--muted); margin:0 0 16px; font-size:14px; }
+.email-form .fields{ display:grid; grid-template-columns: 1fr; gap:10px; }
+.email-form input{ padding:12px 14px; border:1px solid rgba(0,0,0,.10); border-radius:12px; background:#fff; font-size:16px; }
+.email-form .btn{ padding:14px 20px; border:none; border-radius:14px; background:linear-gradient(180deg, var(--brand), var(--brand-ink)); color:#fff; font-weight:700; cursor:pointer; box-shadow:0 10px 24px rgba(201,127,115,.28); letter-spacing:.2px; }
+.email-form .btn:hover{ filter: brightness(0.98); }
+.email-form .btn:focus{ outline:2px solid var(--accent-2); outline-offset:2px; }
+.email-form .consent-row{ display:block; margin-top:10px; font-size:13px; color:var(--muted); }
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+.status{ margin-top:10px; font-size:14px; color:var(--brand-ink); }
+
+.sneak{ margin:48px 0 56px; }
+.sneak h2{ font-family:"Playfair Display", Georgia, serif; font-weight:600; font-size:clamp(24px,3.6vw,40px); margin:0 0 12px; }
+.sneak-grid{ display:grid; grid-template-columns:1fr; gap:20px; align-items:center; }
+.sneak-figure{ margin:0; border-radius:16px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,.08); background:#ddd; }
+.sneak-figure img{ width:100%; height:auto; display:block; object-fit:cover; }
+.sneak-text{ padding:6px 4px; }
+.sneak-text ul{ margin:8px 0 0 18px; color:var(--muted); }
+.sneak-text li{ margin:6px 0; }
+
+.footer{ text-align:center; color:var(--muted); padding:24px 0 16px; font-size:14px; }
+
+/* Always light theme — remove dark overrides */
+
+@media (min-width: 864px){
+  .sneak-grid{ grid-template-columns: 1.1fr 0.9fr; gap:36px; align-items:center; }
+  .sneak-figure{ margin-left:4px; }
+  .sneak-text{ padding:0 8px; }
+  .email-form .fields{ grid-template-columns: 1fr auto; }
+}
+
+/* Subtle paper texture overlay */
+body::before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; opacity:.18;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.14"/></svg>');
+  background-size:320px 320px;
+}
+
+/* Babymoon particle animation */
+.babymoon-particle{
+  position: fixed;
+  font-size: 18px;
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: floatUp 1400ms ease-out forwards;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.15));
+}
+
+@keyframes floatUp{
+  0%{ transform: translate(0,0) scale(0.9) rotate(0deg); opacity:1; }
+  70%{ opacity:1; }
+  100%{ transform: translate(var(--dx), var(--dy)) scale(1.15) rotate(var(--rot)); opacity:0; }
+}
+
+/* Gentle success pulse on the form */
+.signup.success{
+  box-shadow:0 12px 40px rgba(201,127,115,.20);
+  transition: box-shadow 300ms ease;
+}
+
+/* Modal */
+.modal[aria-hidden="true"]{ display:none; }
+.modal{ position:fixed; inset:0; z-index:60; display:grid; place-items:center; }
+.modal-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.25); }
+.modal-dialog{ position:relative; background:var(--card); border-radius:16px; padding:20px 20px 16px; width:min(92vw, 420px); box-shadow:0 20px 50px rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.04) inset; text-align:center; }
+.modal-close{ position:absolute; right:10px; top:6px; background:transparent; border:none; font-size:22px; line-height:1; cursor:pointer; color:var(--muted); }
+.modal-emoji{ font-size:32px; margin-bottom:6px; }
+.modal h3{ margin:6px 0 6px; font-family:"Playfair Display", Georgia, serif; }
+.modal p{ margin:0 0 12px; color:var(--muted); }
+.modal .modal-ok{ width:100%; }
+
+
